@@ -18,13 +18,16 @@ window.addEventListener("keydown", function (event) {
 				reload();
 			  }
 			  if (event.key == 'f'){
+			  		elem = document.getElementById('video');
 				  	console.log('f1');
-				  	// if(document.getElementById('video').requestFullscreen){
-				  	// console.log('f2');
-			  		
-			  		document.getElementById('video').requestFullscreen();
-				
-				  // }
+				  	if(elem.webkitRequestFullScreen){
+					  	console.log('f21');
+						elem.webkitRequestFullScreen();
+				  	}
+				  	if(elem.mozFullScreen){
+					  	console.log('f22');
+						elem.mozFullScreen();
+				  	}
 				  console.log('f3');		
 			}
 

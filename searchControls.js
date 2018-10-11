@@ -6,7 +6,6 @@ window.onload = function(){
 		}
 		
 function reload(){
- 	// document.getElementById('searchInput').setAttribute("placeholder", default_url);
 	var url = document.getElementById('searchInput').value;
 	document.getElementById('videoSource').setAttribute("src", url);
  	document.getElementById('video').load();
