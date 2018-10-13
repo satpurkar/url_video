@@ -31,5 +31,14 @@ window.addEventListener("keydown", function (event) {
 					elem.muted =  true;
 				}
 			}
+																//Volume
+			if (event.key == 'ArrowUp'){						//increase
+			  	document.getElementById('video').volume += 0.1;	
+			}
+			if (event.key == 'ArrowDown'){						//decrease
+			  	document.getElementById('video').volume -= 0.1;	
+			}
+
+			
 
 			})
