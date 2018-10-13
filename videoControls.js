@@ -31,14 +31,21 @@ window.addEventListener("keydown", function (event) {
 					elem.muted =  true;
 				}
 			}
-																//Volume
+
+			let stepVolume = 0.1								//Volume
 			if (event.key == 'ArrowUp'){						//increase
-			  	document.getElementById('video').volume += 0.1;	
+			  	document.getElementById('video').volume += stepVolume;	
 			}
 			if (event.key == 'ArrowDown'){						//decrease
-			  	document.getElementById('video').volume -= 0.1;	
+			  	document.getElementById('video').volume -= stepVolume;	
 			}
 
-			
+			let skipTime = 10									//Time Travel
+			if (event.key == 'ArrowRight'){						//forward
+			  	document.getElementById('video').currentTime += skipTime;	
+			}
+			if (event.key == 'ArrowLeft'){						//back
+			  	document.getElementById('video').currentTime -= skipTime;	
+			}
 
 			})
