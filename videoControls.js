@@ -16,19 +16,24 @@ window.addEventListener("keydown", function (event) {
 			  }
 			  if (event.key == 'Enter'){
 				reload();
-			  }
-			  if (event.key == 'f'){
+			  } 
+			  if (event.key == 'f'){ //fullscreen
 			  		elem = document.getElementById('video');
-				  	console.log('f1');
 				  	if(elem.webkitRequestFullScreen){
-					  	console.log('f21');
-						elem.webkitRequestFullScreen();
+						elem.webkitRequestFullScreen(); // chrome
 				  	}
 				  	if(elem.mozFullScreen){
-					  	console.log('f22');
-						elem.mozFullScreen();
+						elem.mozFullScreen();			//mozilla
 				  	}
-				  console.log('f3');		
+			}
+			if (event.key == 'm'){
+			  	elem = document.getElementById('video');
+				if(elem.muted == true){
+					elem.muted =  false;
+				}
+				else{
+					elem.muted =  true;
+				}
 			}
 
 
